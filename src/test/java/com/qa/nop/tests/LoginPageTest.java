@@ -13,9 +13,19 @@ import io.qameta.allure.SeverityLevel;
 public class LoginPageTest extends BaseTest {
 	
 	
-	@Description("verify login page title...")
+	@Description("verify login page URL...")
 	@Severity(SeverityLevel.MINOR)
 	@Test(priority = 1)
+	public void loginPageUrlTest() {
+		String url = loginPage.getLoginPageUrl();
+		System.out.println("login page url is:"+url);
+		
+		Assert.assertEquals(url, Constants.LOGIN_PAGE_URL, Errors.URL_MISMATCH_ERROR);
+	}
+	
+	@Description("verify login page title...")
+	@Severity(SeverityLevel.MINOR)
+	@Test(priority = 2)
 	public void loginPageTitleTest() {
 		String title = loginPage.getLoginPageTitle();
 		System.out.println("login page title is:"+loginPage);
@@ -26,7 +36,7 @@ public class LoginPageTest extends BaseTest {
 	
 	@Description("verify login page header...")
 	@Severity(SeverityLevel.MINOR)
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void loginPageHeaderTest() {
 		String header = loginPage.getLoginPageHeader();
 		System.out.println("Login Page Header is:"+header);
@@ -37,7 +47,7 @@ public class LoginPageTest extends BaseTest {
 	
 	@Description("verify user is able to login with correct username:{0} and password:{1}...")
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void doLogin() {
 		dashboardPage = loginPage.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
 		String header = dashboardPage.getDashboardHeader();
@@ -45,6 +55,8 @@ public class LoginPageTest extends BaseTest {
 		
 		Assert.assertEquals(header, Constants.DASHBOARD_PAGE_HEADER, Errors.HEADER_MISMATCH_ERROR);
 	}
+	
+	
 	
 	
 

@@ -47,5 +47,10 @@ public class LoginPage {
 		return new DashboardPage(driver);
 				
 	}
+	
+	@Step("getting login page Url")
+	public String getLoginPageUrl() {
+		return driver.getCurrentUrl();
+	}
 
 }
