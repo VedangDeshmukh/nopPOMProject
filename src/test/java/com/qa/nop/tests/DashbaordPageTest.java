@@ -28,7 +28,7 @@ public class DashbaordPageTest extends BaseTest {
 		Assert.assertEquals(header, Constants.DASHBOARD_PAGE_HEADER);
 	}
 	
-	@Description("verify user is able to navigate to Customer page....")
+	@Description("verify user is able to navigate to Customer Page....")
 	@Severity(SeverityLevel.NORMAL)
 	@Test(priority = 2)
 	public void navigateToCustomerPageTest() {
