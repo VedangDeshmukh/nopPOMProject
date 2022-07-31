@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test Sanity Suite" parallel="tests"  thread-count="3" verbose="4">
+
+
+	<listeners>
+
+	
+		<listener
+			class-name="com.qa.nop.listeners.ExtentReportListener" />
+			
+		<listener
+			class-name="com.qa.nop.listeners.TestAllureListener" />
+		
+
+	</listeners>
+
+	<test name="Login Test">
+
+		<classes>
+			<class name="com.qa.nop.tests.LoginPageTest" />
+		</classes>
+
+	</test>
+
+	<test name="Dashboard Test">
+
+		<classes>
+			<class name="com.qa.nop.tests.DashbaordPageTest" />
+		</classes>
+
+	</test>
+
+	<test name="Customer Test">
+
+		<classes>
+			<class name="com.qa.nop.tests.CustomerPageTest" />
+		</classes>
+
+	</test>
+
+
+</suite>  
