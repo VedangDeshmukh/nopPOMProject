@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Constants {
 
-	public static final String LOGINPAGE_TITLE = "Your store. Login";
-	public static final String LOGIN_PAGE_HEADER = "Welcome, please sign in!";
+	public static final String LOGINPAGE_TITLE = "Your store. Login11";
+	public static final String LOGIN_PAGE_HEADER = "Welcome, please sign in11!";
 
 	
 	
